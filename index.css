@@ -97,6 +97,20 @@ body {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 215, 0, 0.4), 0 0 25px rgba(255, 255, 255, 0.3);
 }
 
+/* Disable mobile touch effects */
+.wish-card:active {
+    transform: none !important;
+    scale: none !important;
+}
+
+.wish-card {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
 .wish-card.small {
     padding: 20px;
 }
@@ -196,4 +210,9 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Fallback - ensure cards are visible if JS fails */
+.wish-card {
+    animation: fadeInUp 0.6s ease-out 0.5s forwards;
 }

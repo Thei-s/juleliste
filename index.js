@@ -22,11 +22,8 @@ function initializeScrollAnimations() {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                     entry.target.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-                } else {
-                    // Element is leaving viewport - hide it for next time
-                    entry.target.style.opacity = '0';
-                    entry.target.style.transform = 'translateY(20px)';
                 }
+                // Removed the else clause that was hiding elements when leaving viewport
             });
         }, { threshold: 0.1 });
         
