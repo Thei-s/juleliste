@@ -8,16 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeWishList() {
     console.log('Christmas Wish List Loaded!');
     
-    // Add click effects to wish cards
-    const wishCards = document.querySelectorAll('.wish-card');
-    wishCards.forEach(card => {
-        card.addEventListener('click', function() {
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = '';
-            }, 150);
-        });
-    });
+    // Click effects removed - cards maintain their position and size when clicked
 }
 
 // Initialize scroll-based animations
