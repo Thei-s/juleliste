@@ -48,6 +48,15 @@ body {
     }
 }
 
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* Main Content */
 .main {
     padding-bottom: 60px;
@@ -113,6 +122,34 @@ body {
 
 .wish-card.small {
     padding: 20px;
+}
+
+/* Priority Wishes */
+.wish-card.priority {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe4cc 100%);
+    border: 2px solid #ff9f43;
+    position: relative;
+}
+
+.wish-card.priority::before {
+    content: "⭐";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    z-index: 10;
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 .wish-card h3 {
